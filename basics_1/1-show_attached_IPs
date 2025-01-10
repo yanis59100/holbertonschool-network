@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Show all ipv4 currently use
-hostname -I | cut -d' ' -f1 ; hostname -i
+ifconfig | grep 'inet ' | awk '{print $2}'
